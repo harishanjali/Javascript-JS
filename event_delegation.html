@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event delegation</title>
+</head>
+<body>
+    <div class="parent">
+        <button>button 1</button>
+        <button>button 2</button>
+        <button>button 3</button>
+    </div>
+    <script>
+        //event delegation
+        //instead of writing the multiple listeners, we can do with parent
+        document.querySelector('.parent').addEventListener('click',(event)=>{
+            console.log(event.target.innerText);
+        },true)
+    </script>
+</body>
+</html>
